@@ -1,35 +1,49 @@
 https://www.researchaffiliates.com/publications/articles/1110-why-value-quality-and-momentum-belong-together
 
+# Systematic Alpha Research & Backtesting
 
-# Backtest-engine
+This repository implements a research environment for developing and
+evaluating quantitative trading signals.
 
+The project explores the full pipeline of systematic trading:
 
-## DataHandler
+Idea → Signal → Backtest → Evaluation
 
-~~1. Date distance must be above 60.~~ \
-~~2. Check date format~~ \
-~~3. If random ticker, pick one on your own.~~ \
-~~4. Function - Data = DataHandler(start = "01-01-2024", end = "2024-01-02") - Data.data~~ \
+The framework allows experimentation with different signals and
+evaluates their performance through a modular backtesting engine.
 
-## Strategy
+---
 
-## Account/PM
-1. Account, value, inventory, orders
-2. maintains positions, cash, margin, realized P&L
-3. applies fills, books trades, marks-to-market
-4. enforces constraints
-5. Portfolio checks risk/limits → passes orders to Broker
+# Research Areas
 
-## Slippage/transaction
+The project currently explores several signal families:
 
-DataHandler emits MarketEvent(t)
+• Trend following  
+• Momentum signals  
+• Signal convergence indicators  
+• Volatility signals  
 
-Strategy consumes it → emits OrderEvent(t)
+The goal is to investigate whether simple statistical signals can
+generate persistent trading alpha.
 
-Portfolio checks risk/limits → passes orders to Broker
+---
 
-Broker uses execution model → emits FillEvent(t + latency)
+# Components
 
-Portfolio applies fills, updates positions/cash
+Signal Research
+    experimentation with predictive features
 
-End-of-bar/day: mark-to-market + record snapshot
+Backtesting Engine
+    simulation of trading strategies
+
+Evaluation
+    performance metrics and diagnostics
+
+---
+
+# Repository Structure
+
+docs/       theory and research notes  
+notebooks/  experiments and demonstrations  
+src/        reusable research framework  
+results/    generated figures and outputs
