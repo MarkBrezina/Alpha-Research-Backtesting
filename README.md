@@ -1,3 +1,6 @@
+https://www.researchaffiliates.com/publications/articles/1110-why-value-quality-and-momentum-belong-together
+
+
 # Backtest-engine
 
 
